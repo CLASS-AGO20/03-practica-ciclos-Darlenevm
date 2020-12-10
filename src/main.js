@@ -10,18 +10,32 @@ export default class App {
     convertirAString(numero){
         let i = 1;
         let string = "";
-        while (i<=numero){
-            string +='*';
+        while (i <= numero){
+            string += '*';
             i++;
         }
         return string;
+    }
+    obtenerDivisibles(numero){
+        let i = 1;
+        let contador = 0;
+        do{
+            if(numero % i == 0){
+                contador +=1;
+            }
+            i++;
+        } while (i <= numero);
+        return contador;
     }
 
 }
 
 let app = new App();
 console.log(app.factorial(5));
-console.log(app.factorial(8));
 console.log("");
 console.log(app.convertirAString(3));
+console.log("");
+console.log(app.obtenerDivisibles(6));
+console.log("");
+
 
