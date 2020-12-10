@@ -27,6 +27,13 @@ export default class App {
         } while (i <= numero);
         return contador;
     }
+    elevar(numero, potencia){
+        let i, total = numero;
+        for(i = 1; i < potencia; i++){
+            total = total*numero;
+        }
+        return total;
+    }
 
 }
 
@@ -37,5 +44,6 @@ console.log(app.convertirAString(3));
 console.log("");
 console.log(app.obtenerDivisibles(6));
 console.log("");
+console.log(app.elevar(3,4));
 
 
